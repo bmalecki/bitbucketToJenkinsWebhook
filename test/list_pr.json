@@ -1,0 +1,336 @@
+{
+    "size": 2,
+    "limit": 25,
+    "isLastPage": true,
+    "values": [
+        {
+            "id": 3,
+            "version": 0,
+            "title": "up",
+            "state": "OPEN",
+            "open": true,
+            "closed": false,
+            "createdDate": 1608657238625,
+            "updatedDate": 1608657238625,
+            "fromRef": {
+                "id": "refs/heads/testPR2",
+                "displayId": "testPR2",
+                "latestCommit": "d5a136918ef0f8c1f91936a624ba0188af3b2bd3",
+                "repository": {
+                    "slug": "example",
+                    "id": 1,
+                    "name": "example",
+                    "scmId": "git",
+                    "state": "AVAILABLE",
+                    "statusMessage": "Available",
+                    "forkable": true,
+                    "project": {
+                        "key": "TEST",
+                        "id": 1,
+                        "name": "TEST",
+                        "public": false,
+                        "type": "NORMAL",
+                        "links": {
+                            "self": [
+                                {
+                                    "href": "http://localhost:7990/projects/TEST"
+                                }
+                            ]
+                        }
+                    },
+                    "public": false,
+                    "links": {
+                        "clone": [
+                            {
+                                "href": "ssh://git@localhost:7999/test/example.git",
+                                "name": "ssh"
+                            },
+                            {
+                                "href": "http://localhost:7990/scm/test/example.git",
+                                "name": "http"
+                            }
+                        ],
+                        "self": [
+                            {
+                                "href": "http://localhost:7990/projects/TEST/repos/example/browse"
+                            }
+                        ]
+                    }
+                }
+            },
+            "toRef": {
+                "id": "refs/heads/main",
+                "displayId": "main",
+                "latestCommit": "db0e6276f85c8bd7ae964906e8d0a80af8503bb3",
+                "repository": {
+                    "slug": "example",
+                    "id": 1,
+                    "name": "example",
+                    "scmId": "git",
+                    "state": "AVAILABLE",
+                    "statusMessage": "Available",
+                    "forkable": true,
+                    "project": {
+                        "key": "TEST",
+                        "id": 1,
+                        "name": "TEST",
+                        "public": false,
+                        "type": "NORMAL",
+                        "links": {
+                            "self": [
+                                {
+                                    "href": "http://localhost:7990/projects/TEST"
+                                }
+                            ]
+                        }
+                    },
+                    "public": false,
+                    "links": {
+                        "clone": [
+                            {
+                                "href": "ssh://git@localhost:7999/test/example.git",
+                                "name": "ssh"
+                            },
+                            {
+                                "href": "http://localhost:7990/scm/test/example.git",
+                                "name": "http"
+                            }
+                        ],
+                        "self": [
+                            {
+                                "href": "http://localhost:7990/projects/TEST/repos/example/browse"
+                            }
+                        ]
+                    }
+                }
+            },
+            "locked": false,
+            "author": {
+                "user": {
+                    "name": "admin",
+                    "emailAddress": "admin@example.com",
+                    "id": 1,
+                    "displayName": "admin",
+                    "active": true,
+                    "slug": "admin",
+                    "type": "NORMAL",
+                    "links": {
+                        "self": [
+                            {
+                                "href": "http://localhost:7990/users/admin"
+                            }
+                        ]
+                    }
+                },
+                "role": "AUTHOR",
+                "approved": false,
+                "status": "UNAPPROVED"
+            },
+            "reviewers": [
+                {
+                    "user": {
+                        "name": "user",
+                        "emailAddress": "user@example.com",
+                        "id": 2,
+                        "displayName": "user",
+                        "active": true,
+                        "slug": "user",
+                        "type": "NORMAL",
+                        "links": {
+                            "self": [
+                                {
+                                    "href": "http://localhost:7990/users/user"
+                                }
+                            ]
+                        }
+                    },
+                    "role": "REVIEWER",
+                    "approved": false,
+                    "status": "UNAPPROVED"
+                }
+            ],
+            "participants": [],
+            "properties": {
+                "mergeResult": {
+                    "outcome": "CLEAN",
+                    "current": true
+                },
+                "resolvedTaskCount": 0,
+                "openTaskCount": 0
+            },
+            "links": {
+                "self": [
+                    {
+                        "href": "http://localhost:7990/projects/TEST/repos/example/pull-requests/3"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "version": 56,
+            "title": "wip",
+            "state": "OPEN",
+            "open": true,
+            "closed": false,
+            "createdDate": 1608289279523,
+            "updatedDate": 1608653721730,
+            "fromRef": {
+                "id": "refs/heads/PR",
+                "displayId": "PR",
+                "latestCommit": "b1f139f3e5ea47a6d162932fb46c75e43edc94ac",
+                "repository": {
+                    "slug": "example",
+                    "id": 1,
+                    "name": "example",
+                    "scmId": "git",
+                    "state": "AVAILABLE",
+                    "statusMessage": "Available",
+                    "forkable": true,
+                    "project": {
+                        "key": "TEST",
+                        "id": 1,
+                        "name": "TEST",
+                        "public": false,
+                        "type": "NORMAL",
+                        "links": {
+                            "self": [
+                                {
+                                    "href": "http://localhost:7990/projects/TEST"
+                                }
+                            ]
+                        }
+                    },
+                    "public": false,
+                    "links": {
+                        "clone": [
+                            {
+                                "href": "ssh://git@localhost:7999/test/example.git",
+                                "name": "ssh"
+                            },
+                            {
+                                "href": "http://localhost:7990/scm/test/example.git",
+                                "name": "http"
+                            }
+                        ],
+                        "self": [
+                            {
+                                "href": "http://localhost:7990/projects/TEST/repos/example/browse"
+                            }
+                        ]
+                    }
+                }
+            },
+            "toRef": {
+                "id": "refs/heads/main",
+                "displayId": "main",
+                "latestCommit": "db0e6276f85c8bd7ae964906e8d0a80af8503bb3",
+                "repository": {
+                    "slug": "example",
+                    "id": 1,
+                    "name": "example",
+                    "scmId": "git",
+                    "state": "AVAILABLE",
+                    "statusMessage": "Available",
+                    "forkable": true,
+                    "project": {
+                        "key": "TEST",
+                        "id": 1,
+                        "name": "TEST",
+                        "public": false,
+                        "type": "NORMAL",
+                        "links": {
+                            "self": [
+                                {
+                                    "href": "http://localhost:7990/projects/TEST"
+                                }
+                            ]
+                        }
+                    },
+                    "public": false,
+                    "links": {
+                        "clone": [
+                            {
+                                "href": "ssh://git@localhost:7999/test/example.git",
+                                "name": "ssh"
+                            },
+                            {
+                                "href": "http://localhost:7990/scm/test/example.git",
+                                "name": "http"
+                            }
+                        ],
+                        "self": [
+                            {
+                                "href": "http://localhost:7990/projects/TEST/repos/example/browse"
+                            }
+                        ]
+                    }
+                }
+            },
+            "locked": false,
+            "author": {
+                "user": {
+                    "name": "admin",
+                    "emailAddress": "admin@example.com",
+                    "id": 1,
+                    "displayName": "admin",
+                    "active": true,
+                    "slug": "admin",
+                    "type": "NORMAL",
+                    "links": {
+                        "self": [
+                            {
+                                "href": "http://localhost:7990/users/admin"
+                            }
+                        ]
+                    }
+                },
+                "role": "AUTHOR",
+                "approved": false,
+                "status": "UNAPPROVED"
+            },
+            "reviewers": [
+                {
+                    "user": {
+                        "name": "user",
+                        "emailAddress": "user@example.com",
+                        "id": 2,
+                        "displayName": "user",
+                        "active": true,
+                        "slug": "user",
+                        "type": "NORMAL",
+                        "links": {
+                            "self": [
+                                {
+                                    "href": "http://localhost:7990/users/user"
+                                }
+                            ]
+                        }
+                    },
+                    "lastReviewedCommit": "b1f139f3e5ea47a6d162932fb46c75e43edc94ac",
+                    "role": "REVIEWER",
+                    "approved": false,
+                    "status": "NEEDS_WORK"
+                }
+            ],
+            "participants": [],
+            "properties": {
+                "mergeResult": {
+                    "outcome": "CLEAN",
+                    "current": true
+                },
+                "resolvedTaskCount": 0,
+                "commentCount": 40,
+                "openTaskCount": 0
+            },
+            "links": {
+                "self": [
+                    {
+                        "href": "http://localhost:7990/projects/TEST/repos/example/pull-requests/2"
+                    }
+                ]
+            }
+        }
+    ],
+    "start": 0
+}
