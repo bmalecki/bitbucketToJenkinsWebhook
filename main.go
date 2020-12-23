@@ -15,16 +15,23 @@ import (
 
 var logger = log.New(os.Stdout, "", log.Ldate|log.Ltime|log.Lmicroseconds|log.Llongfile)
 
+func getEnv(key, fallback string) string {
+	if value, ok := os.LookupEnv(key); ok {
+		return value
+	}
+	return fallback
+}
+
 var bitbucketClient = b.NewBitbucketClient(b.BitbucketClientConfig{
-	User:     "user",
-	Password: "user",
-	URL:      "http://localhost:7990",
+	User:     getEnv("BITBUCKET_USER", "user"),
+	Password: getEnv("BITBUCKET_PASSWORD", "user"),
+	URL:      getEnv("BITBUCKET_URL", "http://localhost:7990"),
 })
 
 var jenkinsClient = j.NewJenkinsClient(j.JenkinsClientConfig{
-	User:  "admin",
-	Token: "11cef4962f699ef4e4d4f9093e63445a2e",
-	URL:   "http://localhost:8080/job/test/buildWithParameters",
+	User:  getEnv("JENKINS_USER", "admin"),
+	Token: getEnv("JENKINS_TOKEN", "11cef4962f699ef4e4d4f9093e63445a2e"),
+	URL:   getEnv("JENKINS_URL", "http://localhost:8080/job/test/buildWithParameters"),
 })
 
 func notFound(w http.ResponseWriter, req *http.Request) {

@@ -6,24 +6,31 @@ pipeline {
         string(name: 'RefID')
         string(name: 'PullRequestID')
     }
+    environment {
+        BITBUCKET_URL = 'http://172.29.80.1:7990'
+        BITBUCKET_USER = 'user'
+        BITBUCKET_PASSWORD = 'user'
+    }
     options {
         disableConcurrentBuilds()
     }
     stages {
         stage('Build') {
             steps {
-                sh "echo git clone http://localhost:7990/scm/${ProjectKey}/${RepoName}.git"
+                // mock build
+                sh "echo git clone ${BITBUCKET_URL}/scm/${ProjectKey}/${RepoName}.git"
                 sh "echo git checkout ${RefID}"
-                sh "exit 0"
+                sh "exit 0" // successful build
+                // sh "exit 1" // failed build
             }
         }
         stage('Approve PR') {
             steps {
                 sh "echo Approve PR"
                 sh """
-                curl -v -u user:user -XPUT -H "Content-Type: application/json" \
+                curl -v -u ${BITBUCKET_USER}:${BITBUCKET_PASSWORD} -XPUT -H "Content-Type: application/json" \
                     --data '{"status": "APPROVED"}' \
-                    http://172.29.80.1:7990/rest/api/1.0/projects/${ProjectKey}/repos/${RepoName}/pull-requests/${PullRequestID}/participants/user
+                    ${BITBUCKET_URL}/rest/api/1.0/projects/${ProjectKey}/repos/${RepoName}/pull-requests/${PullRequestID}/participants/user
                 """
             }
         }
@@ -32,9 +39,9 @@ pipeline {
         failure { 
             sh "echo Decline PR"
             sh """
-            curl -v -u user:user  -H "Content-Type: application/json" \
+            curl -v -u ${BITBUCKET_USER}:${BITBUCKET_PASSWORD}  -H "Content-Type: application/json" \
                 --data '{"text": "Build failed. Please test your branch locally."}' \
-                http://172.29.80.1:7990/rest/api/1.0/projects/${ProjectKey}/repos/${RepoName}/pull-requests/${PullRequestID}/comments
+                ${BITBUCKET_URL}/rest/api/1.0/projects/${ProjectKey}/repos/${RepoName}/pull-requests/${PullRequestID}/comments
              """
         }
     }
